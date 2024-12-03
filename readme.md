@@ -1,17 +1,28 @@
 # wepppy-docker-base
 
-This is a docker image for running wepppy. It is based on ubuntu:bionic and
-installs all the necessary dependencies for wepppy. The wepppy source directory
-and weppcloud_runs directory is mounted to the container
+This is a docker image for running wepppy. It is based on ubuntu:22.04 and
+installs all the necessary dependencies for wepppy. 
 
-A local geodata/weppcloud_runs folder needs to be created. The project runs are
-stored in this folder. The geodata folder is mounted to the docker container
+It is setup to run as a dev container with VS Code
 
-User will need to modify the volume mounts in the launch_image.sh script
+## VS Code Instructions
 
-To launch the image run the launch_image.sh script. This should start the Flask
-webservice weppcloud/app.py on port 5003
+1. First install Docker (Docker Desktop on Windows)
 
-To get a shell for the docker container run get_shell.sh
+2. Install Microsoft VS Code
 
-To kill the container run kill_image.sh
+3. Then clone project and open in vscode
+
+4. Build the dev container (ctrl + shift + p) Dev Containers: Rebuild Container
+
+5. Container should build without errors
+
+6. Wepppy scripted runs can be verified with:
+
+```
+cd /workdir/wepppy/wepppy/_scripts
+python3 python3 test_scripted_run.py
+```
+
+Should see the following:
+![image](https://github.com/user-attachments/assets/efad81ca-91ed-42d1-84dd-0ba497f04fb9)

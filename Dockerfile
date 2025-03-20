@@ -254,7 +254,8 @@ RUN wget http://archive.ubuntu.com/ubuntu/pool/universe/g/gcc-6/libgfortran3_6.4
 RUN dpkg -i gcc-6-base_6.4.0-17ubuntu1_amd64.deb
 RUN dpkg -i libgfortran3_6.4.0-17ubuntu1_amd64.deb
 
-RUN echo "OPENTOPOGRAPHY_API_KEY=" > /workdir/wepppy/wepppy/locales/earth/opentopography/.env
+# this is for earth DEM data
+#RUN echo "OPENTOPOGRAPHY_API_KEY=" > /workdir/wepppy/wepppy/locales/earth/opentopography/.env
 
 # install and start redis server
 RUN apt-get install -y redis-server supervisor

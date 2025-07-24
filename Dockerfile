@@ -221,6 +221,7 @@ RUN pip3 install zict==3.0.0
 RUN pip3 install zipp==1.0.0
 RUN pip3 install python-dotenv
 RUN pip3 install -U Flask-Security-Too
+RUN pip3 install duckdb
 
 # install wepppy
 RUN mkdir -p /workdir

@@ -31,5 +31,8 @@
 	},
 
 	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
-	"remoteUser": "root"
+	"remoteUser": "root",
+
+	"workspaceMount": "source=C:\\Users\\Anurag\\Documents\\GitHub\\wepppy-NerisAsh,target=/workdir,type=bind",
+	"workspaceFolder": "/workdir"
 }
